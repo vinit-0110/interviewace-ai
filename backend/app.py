@@ -16,7 +16,7 @@ def create_app():
     
     # Initialize CORS
     # Allow all headers, methods, and origins for local development
-    CORS(app, resources={r"/api/*": {"origins": "*"}})
+    CORS(app, supports_credentials=True)
     
     # Initialize Database
     db.init_app(app)
