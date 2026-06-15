@@ -1,0 +1,38 @@
+# Python Virtual Environments
+backend/venv/
+backend/.venv/
+backend/env/
+backend/ENV/
+backend/__pycache__/
+backend/**/*.pyc
+backend/**/*.pyo
+backend/**/*.pyd
+
+# Node.js
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.svelte-kit/
+frontend/.next/
+frontend/out/
+
+# Local databases, reports, and logs
+backend/instance/
+backend/*.db
+backend/*.log
+backend/static/reports/report_interview_*.pdf
+backend/temp/
+*.log
+
+# Environment files
+.env
+backend/.env
+frontend/.env
+frontend/.env.local
+backend/static/reports/*.pdf
+
+# IDEs and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
