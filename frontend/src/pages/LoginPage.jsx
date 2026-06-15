@@ -91,7 +91,7 @@ export const LoginPage = () => {
     e.preventDefault();
     setForgotMsg('');
     try {
-      const res = await fetch('https://interviewace-api-h4d1.onrender.com/api/auth/forgot-password', {
+      const res = await fetch('https://interviewace-api-h4dl.onrender.com/api/auth/forgot-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: forgotEmail })

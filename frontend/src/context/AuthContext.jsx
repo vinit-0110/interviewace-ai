@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext();
 
-export const API_BASE_URL = 'https://interviewace-api-h4d1.onrender.com';
+export const API_BASE_URL = 'https://interviewace-api-h4dl.onrender.com';
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
