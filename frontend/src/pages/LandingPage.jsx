@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { 
-  Sparkles, 
-  ArrowRight, 
-  MessageSquare, 
-  TrendingUp, 
-  Award, 
-  Compass, 
-  Check, 
-  Plus, 
-  Minus,
-  Mail,
-  User,
-  Shield,
-  MessageCircle,
-  FileText
+import {
+  Sparkles,
+  ArrowRight,
+  MessageSquare,
+  TrendingUp,
+  Award,
+  Compass,
+  Check,
+  Plus,
+  Minus
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -216,100 +211,7 @@ export const LandingPage = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="max-w-7xl mx-auto px-6 py-20 border-t border-slate-200 dark:border-slate-800">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-slate-900 dark:text-white">
-          Pricing Plans Fit for Everyone
-        </h2>
-        <p className="text-slate-600 dark:text-slate-400 text-center max-w-xl mx-auto mb-16">
-          Start for free, and upgrade when you are ready to supercharge your interview preparation.
-        </p>
-        
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {/* Free Tier */}
-          <div className="glass-card rounded-2xl p-8 border dark:border-slate-800 flex flex-col justify-between">
-            <div>
-              <h3 className="text-lg font-bold text-slate-500 dark:text-slate-400 mb-2">Free Prep</h3>
-              <p className="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">$0</p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center space-x-3 text-sm">
-                  <Check className="h-5 w-5 text-brand-500" />
-                  <span>3 AI Mock Interviews</span>
-                </li>
-                <li className="flex items-center space-x-3 text-sm">
-                  <Check className="h-5 w-5 text-brand-500" />
-                  <span>Skill Assessment Tests</span>
-                </li>
-                <li className="flex items-center space-x-3 text-sm">
-                  <Check className="h-5 w-5 text-brand-500" />
-                  <span>Basic Analytics Dashboard</span>
-                </li>
-              </ul>
-            </div>
-            <button onClick={handleStartPrep} className="w-full py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-              Get Started
-            </button>
-          </div>
-
-          {/* Pro Tier (Popular) */}
-          <div className="glass-card rounded-2xl p-8 border border-brand-500 bg-brand-500/5 dark:bg-brand-500/10 flex flex-col justify-between relative shadow-glow">
-            <span className="absolute top-0 right-6 -translate-y-1/2 px-3 py-1 bg-brand-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">
-              Most Popular
-            </span>
-            <div>
-              <h3 className="text-lg font-bold text-brand-500 mb-2">Pro Prep</h3>
-              <p className="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">$15 <span className="text-sm font-normal text-slate-500">/ mo</span></p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center space-x-3 text-sm">
-                  <Check className="h-5 w-5 text-brand-500" />
-                  <span>Unlimited Mock Interviews</span>
-                </li>
-                <li className="flex items-center space-x-3 text-sm">
-                  <Check className="h-5 w-5 text-brand-500" />
-                  <span>Real-time Voice Input & Transcription</span>
-                </li>
-                <li className="flex items-center space-x-3 text-sm">
-                  <Check className="h-5 w-5 text-brand-500" />
-                  <span>Personalized Study Roadmaps</span>
-                </li>
-                <li className="flex items-center space-x-3 text-sm">
-                  <Check className="h-5 w-5 text-brand-500" />
-                  <span>PDF Performance Downloads</span>
-                </li>
-              </ul>
-            </div>
-            <button onClick={handleStartPrep} className="w-full py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold shadow-glow transition-colors">
-              Upgrade to Pro
-            </button>
-          </div>
-
-          {/* Enterprise */}
-          <div className="glass-card rounded-2xl p-8 border dark:border-slate-800 flex flex-col justify-between">
-            <div>
-              <h3 className="text-lg font-bold text-slate-500 dark:text-slate-400 mb-2">Institution</h3>
-              <p className="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">Custom</p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center space-x-3 text-sm">
-                  <Check className="h-5 w-5 text-brand-500" />
-                  <span>Custom Question Banks</span>
-                </li>
-                <li className="flex items-center space-x-3 text-sm">
-                  <Check className="h-5 w-5 text-brand-500" />
-                  <span>Bulk User Licenses</span>
-                </li>
-                <li className="flex items-center space-x-3 text-sm">
-                  <Check className="h-5 w-5 text-brand-500" />
-                  <span>Candidate Auditing Tools</span>
-                </li>
-              </ul>
-            </div>
-            <a href="mailto:support@interviewace.ai" className="w-full py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-center block">
-              Contact Sales
-            </a>
-          </div>
-        </div>
-      </section>
-
+     
       {/* FAQ Section */}
       <section className="max-w-4xl mx-auto px-6 py-20 border-t border-slate-200 dark:border-slate-800">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-900 dark:text-white">
@@ -339,45 +241,7 @@ export const LandingPage = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="max-w-xl mx-auto px-6 py-20 border-t border-slate-200 dark:border-slate-800 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Get in Touch</h2>
-        <p className="text-slate-600 dark:text-slate-400 mb-8">
-          Have queries about custom packages? Reach out to our support desk.
-        </p>
-        <form onSubmit={(e) => { e.preventDefault(); alert("Message sent successfully (Mocked). We'll reply shortly!"); }} className="space-y-4 text-left">
-          <div>
-            <label className="text-xs font-semibold uppercase text-slate-400 block mb-1">Your Name</label>
-            <input
-              type="text"
-              required
-              placeholder="Candidate Name"
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 outline-none focus:ring-2 focus:ring-brand-500/20"
-            />
-          </div>
-          <div>
-            <label className="text-xs font-semibold uppercase text-slate-400 block mb-1">Email Address</label>
-            <input
-              type="email"
-              required
-              placeholder="candidate@example.com"
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 outline-none focus:ring-2 focus:ring-brand-500/20"
-            />
-          </div>
-          <div>
-            <label className="text-xs font-semibold uppercase text-slate-400 block mb-1">Message</label>
-            <textarea
-              required
-              rows="4"
-              placeholder="Type your question..."
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 outline-none focus:ring-2 focus:ring-brand-500/20"
-            ></textarea>
-          </div>
-          <button type="submit" className="w-full py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold shadow-glow">
-            Send Message
-          </button>
-        </form>
-      </section>
+     
 
       {/* Footer */}
       <footer className="bg-slate-100 dark:bg-dark-900/40 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500">
